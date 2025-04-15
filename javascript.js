@@ -1,6 +1,7 @@
 let rock = "Rock";
 let paper = "Paper";
 let scissors = "Scissors";
+let choice;
 
 function getComputerChoice(){
     let random = Math.random();
@@ -18,4 +19,12 @@ function getComputerChoice(){
 }
 
 choice = getComputerChoice();
-console.log(choice);
+let humanChoice = prompt("Rock, paper, scissors?");
+
+function getHumanChoice(humanChoice){
+    choice = humanChoice;
+    return humanChoice;
+}
+
+console.log("Computer choice:", choice);
+console.log("Human choice:", humanChoice);
