@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+}
+
+div{
+    justify-items: center;
+    align-content: center;
+    background-color: rgb(222, 206, 184);
+    height: 200px;
+}
+
+h1{
+    color: rgb(246, 234, 234);
+    text-shadow: 2px 2px 8px #0c0c0c;
+}
+
+button{
+    background-color: palevioletred;
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    border-color: palevioletred;
+    border-style: solid;
+    font-weight: 700;
+    color: azure;
+    text-shadow: 2px 2px 8px #0c0c0c;
+}
