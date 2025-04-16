@@ -2,6 +2,7 @@ let computerChoice;
 let humanChoice;
 let computerScore = 0;
 let humanScore = 0;
+let roundCounter = 0;
 
 function getComputerChoice(){
     let random = Math.random();
@@ -17,7 +18,7 @@ function getComputerChoice(){
 }
 
 function getHumanChoice(){
-    humanChoice = prompt("Rock, paper, scissors?");
+    alert("uslo");
     return humanChoice.toUpperCase();
 }
 
@@ -49,25 +50,61 @@ function playRound(humanChoice, computerChoice){
 }
 
 function playGame(){
-    for (let i = 0; i < 5; i++){
+    computerChoice = getComputerChoice();
+    playRound(humanChoice, computerChoice);
 
-        computerChoice = getComputerChoice();
-        humanChoice = getHumanChoice();
+    roundCounter++;
 
-        playRound(humanChoice, computerChoice);
-    }
+    if (roundCounter == 5){
+        console.log("FINAL SCORES:");
+        console.log("Human: ", humanScore);
+        console.log("Computer: ", computerScore);
 
-    console.log("FINAL SCORES:");
-    console.log("Human: ", humanScore);
-    console.log("Computer: ", computerScore);
-
-    if (humanScore > computerScore){
-        console.log("You won the game!");
-    }
-    else if (computerScore > humanScore){
-        console.log("Computer won the game!");
-    }
-    else {
-        console.log("It's a tie!");
+        if (humanScore > computerScore){
+            console.log("You won the game!");
+        }
+        else if (computerScore > humanScore){
+            console.log("Computer won the game!");
+        }
+        else {
+            console.log("It's a tie!");
+        }
     }
 }
+
+let button = document.querySelector("#play");
+
+const list = document.querySelector("ul");
+const rockButton = document.createElement("button");
+const paperButton = document.createElement("button");
+const scissorsButton = document.createElement("button");
+
+button.addEventListener("click", () => {
+    const listItem = document.createElement("li");
+
+    rockButton.textContent = "Rock";
+    paperButton.textContent = "Paper";
+    scissorsButton.textContent = "Scissors";
+
+    listItem.appendChild(rockButton);
+    listItem.appendChild(paperButton);
+    listItem.appendChild(scissorsButton);
+
+    list.appendChild(listItem);
+    alert("Choose one of the options.");
+});
+
+rockButton.addEventListener("click", () => {
+    humanChoice = "ROCK";
+    playGame();
+});
+
+paperButton.addEventListener("click", () => {
+    humanChoice = "PAPER";
+    playGame();
+});
+
+scissorsButton.addEventListener("click", () => {
+    humanChoice = "SCISSORS"
+    playGame();
+});
