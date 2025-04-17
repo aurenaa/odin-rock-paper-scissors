@@ -1,27 +1,38 @@
 body{
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 div{
     justify-items: center;
     align-content: center;
-    background-color: rgb(222, 206, 184);
+    background-color: rgb(233, 229, 229);
     height: 200px;
 }
 
-h1{
-    color: rgb(246, 234, 234);
-    text-shadow: 2px 2px 8px #0c0c0c;
-}
-
 button{
-    background-color: palevioletred;
-    height: 30px;
-    width: 150px;
-    border-radius: 10px;
-    border-color: palevioletred;
+    background-color: rgb(131, 131, 131);
+    height: 50px;
+    width: 170px;
+    border-color: rgb(131, 131, 131);
     border-style: solid;
     font-weight: 700;
-    color: azure;
-    text-shadow: 2px 2px 8px #0c0c0c;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+.game-button{
+    margin-right: 37px;
+    border-radius: 0px;
+    height: 30px;
+    width: 150px;
+}
+
+
+#body{
+    background-color: whitesmoke;
+    font-weight: bold;
 }
